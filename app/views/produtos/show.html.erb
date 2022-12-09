@@ -1,0 +1,39 @@
+<br><br><br><br><br><br>
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<h3>Cliente Cadastrado:</h3>
+<hr>
+<p>
+  <strong>Nome:</strong>
+  <%= @produto.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @produto.descricao %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @produto.quantidade %>
+</p>
+
+<p>
+  <strong>Vencimento:</strong>
+  <%= @produto.vencimento %>
+</p>
+
+<p>
+  <strong>Preco compra:</strong>
+  <%= @produto.preco_compra %>
+</p>
+
+<p>
+  <strong>Preco venda:</strong>
+  <%= @produto.preco_venda %>
+</p>
+
+<%= link_to 'Editar', edit_produto_path(@produto), :class => "btn btn-primary" %>
+<%= link_to 'Voltar', produtos_path, :class => "btn btn-primary" %>
+</div>
