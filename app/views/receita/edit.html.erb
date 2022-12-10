@@ -1,6 +1,12 @@
-<h1>Editing Receitum</h1>
+<br><br><br><br><br><br>
+<div class="container">
+<h1>Editar Receita:</h1>
+<hr>
 
 <%= render 'form', receitum: @receitum %>
+<br>
 
-<%= link_to 'Show', @receitum %> |
-<%= link_to 'Back', receita_path %>
+<%= link_to 'Mostrar', @receitum, :class => "btn btn-primary" %> 
+<%= link_to 'Voltar', receita_path, :class => "btn btn-primary" %>
+<br><br>
+</div>

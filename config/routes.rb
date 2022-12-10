@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pedido_produtos
+  resources :pedidos
   resources :receita
   resources :despesas
   resources :fornecedors

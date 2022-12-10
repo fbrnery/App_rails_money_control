@@ -1,5 +1,9 @@
+<br><br><br><br><br><br>
 <p id="notice"><%= notice %></p>
 
+<div class="container">
+<h3>Receita Cadastrada:</h3>
+<hr>
 <p>
   <strong>Nome:</strong>
   <%= @receitum.nome %>
@@ -15,5 +19,6 @@
   <%= @receitum.valor %>
 </p>
 
-<%= link_to 'Edit', edit_receitum_path(@receitum) %> |
-<%= link_to 'Back', receita_path %>
+<%= link_to 'Editar', edit_receitum_path(@receitum), :class => "btn btn-primary" %> 
+<%= link_to 'Voltar', receita_path, :class => "btn btn-primary" %>
+</div>

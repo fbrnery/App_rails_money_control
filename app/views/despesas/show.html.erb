@@ -1,5 +1,9 @@
+<br><br><br><br><br><br>
 <p id="notice"><%= notice %></p>
 
+<div class="container">
+<h3>Despesa Cadastrada:</h3>
+<hr>
 <p>
   <strong>Nome:</strong>
   <%= @despesa.nome %>
@@ -15,5 +19,6 @@
   <%= @despesa.valor %>
 </p>
 
-<%= link_to 'Edit', edit_despesa_path(@despesa) %> |
-<%= link_to 'Back', despesas_path %>
+<%= link_to 'Edit', edit_despesa_path(@despesa), :class => "btn btn-primary" %> 
+<%= link_to 'Back', despesas_path, :class => "btn btn-primary" %>
+</div>

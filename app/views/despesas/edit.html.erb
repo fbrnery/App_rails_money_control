@@ -1,6 +1,12 @@
-<h1>Editing Despesa</h1>
+<br><br><br><br><br><br>
+<div class="container">
+<h1>Editar Despesa:</h1>
+<hr>
 
 <%= render 'form', despesa: @despesa %>
+<br>
 
-<%= link_to 'Show', @despesa %> |
-<%= link_to 'Back', despesas_path %>
+<%= link_to 'Mostrar', @despesa, :class => "btn btn-primary" %> 
+<%= link_to 'Voltar', despesas_path, :class => "btn btn-primary" %>
+<br><br>
+</div>

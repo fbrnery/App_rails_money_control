@@ -1,8 +1,11 @@
+<br><br><br><br><br><br><br>
+
 <p id="notice"><%= notice %></p>
+<div class="container">
+<h1>Receitas:</h1>
+<hr>
 
-<h1>Receita</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Nome</th>
@@ -18,9 +21,9 @@
         <td><%= receitum.nome %></td>
         <td><%= receitum.descricao %></td>
         <td><%= receitum.valor %></td>
-        <td><%= link_to 'Show', receitum %></td>
-        <td><%= link_to 'Edit', edit_receitum_path(receitum) %></td>
-        <td><%= link_to 'Destroy', receitum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', receitum, :class => "btn btn-outline-primary" %></td>
+        <td><%= link_to 'Editar', edit_receitum_path(receitum), :class => "btn btn-outline-primary" %></td>
+        <td><%= link_to 'Apagar', receitum, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +31,5 @@
 
 <br>
 
-<%= link_to 'New Receitum', new_receitum_path %>
+<%= link_to '+ Novo', new_receitum_path, :class => "btn btn-primary" %>
+</div>
