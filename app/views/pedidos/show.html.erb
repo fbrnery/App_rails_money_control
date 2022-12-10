@@ -1,5 +1,7 @@
+<br><br><br><br><br><br>
 <p id="notice"><%= notice %></p>
 
+<div class="container">
 <p>
   <strong>Cliente:</strong>
   <%= @pedido.cliente_id %>
@@ -10,5 +12,6 @@
   <%= @pedido.valor_total %>
 </p>
 
-<%= link_to 'Edit', edit_pedido_path(@pedido) %> |
-<%= link_to 'Back', pedidos_path %>
+<%= link_to 'Editar', edit_pedido_path(@pedido), :class => "btn btn-primary" %> |
+<%= link_to 'Voltar', pedidos_path, :class => "btn btn-primary" %>
+</div>
