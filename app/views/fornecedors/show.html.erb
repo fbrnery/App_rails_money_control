@@ -1,0 +1,29 @@
+<br><br><br><br><br><br>
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<h3>Fornecedor Cadastrado:</h3>
+<hr>
+<p>
+  <strong>Nome:</strong>
+  <%= @fornecedor.nome %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @fornecedor.telefone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @fornecedor.email %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @fornecedor.site %>
+</p>
+
+<%= link_to 'Editar', edit_fornecedor_path(@fornecedor), :class => "btn btn-primary" %>
+<%= link_to 'Voltar', fornecedors_path, :class => "btn btn-primary" %>
+</div>
