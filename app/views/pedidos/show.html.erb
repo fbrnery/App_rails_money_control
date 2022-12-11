@@ -4,7 +4,7 @@
 <div class="container">
 <p>
   <strong>Cliente:</strong>
-  <%= @pedido.cliente_id %>
+  <%= @pedido.cliente.nome %>
 </p>
 
 <p>
@@ -12,6 +12,6 @@
   <%= @pedido.valor_total %>
 </p>
 
-<%= link_to 'Editar', edit_pedido_path(@pedido), :class => "btn btn-primary" %> |
+<%= link_to 'Editar', edit_pedido_path(@pedido), :class => "btn btn-primary" %> 
 <%= link_to 'Voltar', pedidos_path, :class => "btn btn-primary" %>
 </div>

@@ -1,11 +1,11 @@
 <br><br><br><br><br><br>
 <div class="container">
-<h1>Editing Pedido</h1>
+<h1>Editando Pedido:</h1>
 <hr>
 
 <%= render 'form', pedido: @pedido %>
 <br>
 
-<%= link_to 'Mostrar', @pedido %> |
-<%= link_to 'Voltar', pedidos_path %>
+<%= link_to 'Mostrar', @pedido, :class => "btn btn-primary" %> 
+<%= link_to 'Voltar', pedidos_path, :class => "btn btn-primary" %>
 </div>
