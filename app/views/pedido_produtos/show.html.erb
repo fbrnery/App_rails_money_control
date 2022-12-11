@@ -1,7 +1,10 @@
+<br><br><br><br><br><br>
 <p id="notice"><%= notice %></p>
 
+<div class="container">
 <p>
-  <strong>Pedido:</strong>
+  <strong>Pedido Cadastrado:</strong>
+  <hr>
   <%= @pedido_produto.pedido_id %>
 </p>
 
@@ -15,5 +18,6 @@
   <%= @pedido_produto.valor %>
 </p>
 
-<%= link_to 'Edit', edit_pedido_produto_path(@pedido_produto) %> |
-<%= link_to 'Back', pedido_produtos_path %>
+<%= link_to 'Editar', edit_pedido_produto_path(@pedido_produto), :class => "btn btn-primary" %> |
+<%= link_to 'Voltar', pedido_produtos_path, :class => "btn btn-primary" %>
+</div>

@@ -1,6 +1,10 @@
-<h1>Editing Pedido Produto</h1>
+<br><br><br><br><br><br>
+<div class="container">
+<h1>Editar Pedido Produto</h1>
 
 <%= render 'form', pedido_produto: @pedido_produto %>
+<br>
 
-<%= link_to 'Show', @pedido_produto %> |
-<%= link_to 'Back', pedido_produtos_path %>
+<%= link_to 'Mostrar', @pedido_produto, :class => "btn btn-primary" %> |
+<%= link_to 'Voltar', pedido_produtos_path, :class => "btn btn-primary" %>
+</div>

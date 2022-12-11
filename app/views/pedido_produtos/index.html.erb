@@ -1,8 +1,11 @@
+<br><br><br><br><br><br><br>
+
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Pedido Produtos</h1>
+<hr>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Pedido</th>
@@ -18,9 +21,9 @@
         <td><%= pedido_produto.pedido_id %></td>
         <td><%= pedido_produto.produto_id %></td>
         <td><%= pedido_produto.valor %></td>
-        <td><%= link_to 'Show', pedido_produto %></td>
-        <td><%= link_to 'Edit', edit_pedido_produto_path(pedido_produto) %></td>
-        <td><%= link_to 'Destroy', pedido_produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pedido_produto, :class => "btn btn-outline-primary" %></td>
+        <td><%= link_to 'Edit', edit_pedido_produto_path(pedido_produto), :class => "btn btn-outline-primary" %></td>
+        <td><%= link_to 'Destroy', pedido_produto, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Pedido Produto', new_pedido_produto_path %>
+<%= link_to '+ Novo', new_pedido_produto_path, :class => "btn btn-primary" %>

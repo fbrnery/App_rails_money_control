@@ -10,23 +10,27 @@
       </ul>
     </div>
   <% end %>
+  <br>
+<div class="container">
 
-  <div class="field">
+  <div class="mb-3">
     <%= form.label :pedido_id %>
-    <%= form.text_field :pedido_id %>
+    <%= form.text_field :pedido_id, class: "form-control" %>
   </div>
 
-  <div class="field">
+<div class="mb-3">
     <%= form.label :produto_id %>
-    <%= form.text_field :produto_id %>
+    <%= form.text_field :produto_id, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="mb-3">
     <%= form.label :valor %>
-    <%= form.text_field :valor %>
+    <%= form.text_field :valor, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Cadastrar' %>
   </div>
 <% end %>
+
+</div>
