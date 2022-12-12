@@ -5,6 +5,6 @@
 <%= render 'form', pedido_produto: @pedido_produto %>
 <br>
 
-<%= link_to 'Mostrar', @pedido_produto, :class => "btn btn-primary" %> |
-<%= link_to 'Voltar', pedido_produtos_path, :class => "btn btn-primary" %>
+<%= link_to 'Mostrar', pedido_pedido_produto_path(@pedido, @pedido_produto), :class => "btn btn-primary" %>
+<%= link_to 'Voltar', pedido_pedido_produtos_path(@pedido), :class => "btn btn-primary" %>
 </div>

@@ -1,7 +1,7 @@
 <br><br><br><br><br><br><br>
 
-<p id="notice"><%= notice %></p>
 <div class="container">
+<p id="notice"><%= notice %></p>
 <h1>Pedidos</h1>
 <hr>
 
@@ -19,6 +19,7 @@
       <tr>
         <td><%= pedido.cliente.nome %></td>
         <td><%= pedido.valor_total %></td>
+        <td><%= link_to 'Itens', "/pedidos/#{pedido.id}/pedido_produtos", :class => "btn btn-outline-primary" %></td>
         <td><%= link_to 'Mostrar', pedido, :class => "btn btn-outline-primary" %></td>
         <td><%= link_to 'Editar', edit_pedido_path(pedido), :class => "btn btn-outline-primary" %></td>
         <td><%= link_to 'Apagar', pedido, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-primary" %></td>

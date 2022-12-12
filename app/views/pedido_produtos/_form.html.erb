@@ -1,4 +1,4 @@
-<%= form_with(model: pedido_produto) do |form| %>
+<%= form_with(model: [@pedido, @pedido_produto]) do |form| %>
   <% if pedido_produto.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(pedido_produto.errors.count, "error") %> prohibited this pedido_produto from being saved:</h2>
@@ -13,14 +13,10 @@
   <br>
 <div class="container">
 
-  <div class="mb-3">
-    <%= form.label :pedido_id %>
-    <%= form.text_field :pedido_id, class: "form-control" %>
-  </div>
-
 <div class="mb-3">
     <%= form.label :produto_id %>
-    <%= form.text_field :produto_id, class: "form-control" %>
+    <%= form.select :produto_id, Produto.all.collect { |produto| [produto.nome, produto.id] }, 
+    {:selected => @pedido_produto.produto_id}, {:class=> 'form-control'} %>
   </div>
 
   <div class="mb-3">
