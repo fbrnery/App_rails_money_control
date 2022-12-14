@@ -18,7 +18,7 @@
   <tbody>
     <% @pedido_produtos.each do |pedido_produto| %>
       <tr>
-        
+        <td><%= pedido_produto.produto.id %></td>
         <td><%= pedido_produto.produto.nome %></td>
         <td><%= pedido_produto.valor %></td>
         <td><%= link_to 'Mostrar', pedido_pedido_produto_path(@pedido, pedido_produto), :class => "btn btn-outline-primary" %></td>
