@@ -3,9 +3,9 @@
 one:
   nome: MyString
   descricao: MyString
-  valor: MyString
+  valor: 1.5
 
 two:
   nome: MyString
   descricao: MyString
-  valor: MyString
+  valor: 1.5

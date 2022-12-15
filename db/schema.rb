@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_10_214620) do
+ActiveRecord::Schema.define(version: 2022_12_15_124005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,15 @@ ActiveRecord::Schema.define(version: 2022_12_10_214620) do
   create_table "despesas", force: :cascade do |t|
     t.string "nome"
     t.string "descricao"
-    t.string "valor"
+    t.float "valor"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "faturamentos", force: :cascade do |t|
+    t.string "nome"
+    t.string "descricao"
+    t.float "valor"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -65,14 +73,6 @@ ActiveRecord::Schema.define(version: 2022_12_10_214620) do
     t.datetime "vencimento"
     t.float "preco_compra"
     t.float "preco_venda"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "receita", force: :cascade do |t|
-    t.string "nome"
-    t.string "descricao"
-    t.string "valor"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

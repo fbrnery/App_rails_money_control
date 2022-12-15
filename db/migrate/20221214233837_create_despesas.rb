@@ -3,7 +3,7 @@ class CreateDespesas < ActiveRecord::Migration[6.1]
     create_table :despesas do |t|
       t.string :nome
       t.string :descricao
-      t.string :valor
+      t.float :valor
 
       t.timestamps
     end

@@ -1,0 +1,35 @@
+<br><br><br><br><br><br><br>
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<h1>Receitas:</h1>
+<hr>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Valor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faturamentos.each do |faturamento| %>
+      <tr>
+        <td><%= faturamento.nome %></td>
+        <td><%= faturamento.descricao %></td>
+        <td><%= faturamento.valor %></td>
+        <td><%= link_to 'Mostrar', faturamento, :class => "btn btn-outline-primary" %></td>
+        <td><%= link_to 'Editar', edit_faturamento_path(faturamento), :class => "btn btn-outline-primary" %></td>
+        <td><%= link_to 'Apagar', faturamento, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-primary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '+ Novo', new_faturamento_path, :class => "btn btn-primary" %>
+</div>

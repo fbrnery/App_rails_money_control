@@ -1,0 +1,28 @@
+<br><br><br><br><br><br>
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<h3>Receita Cadastrada:</h3>
+<hr>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @faturamento.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @faturamento.descricao %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @faturamento.valor %>
+</p>
+
+<%= link_to 'Editar', edit_faturamento_path(@faturamento), :class => "btn btn-primary" %>
+<%= link_to 'Voltar', faturamentos_path, :class => "btn btn-primary" %>
+
+</div>
+
+

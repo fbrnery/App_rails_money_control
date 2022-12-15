@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ReceitumTest < ActiveSupport::TestCase
+class FaturamentoTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

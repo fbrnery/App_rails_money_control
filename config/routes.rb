@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  resources :faturamentos
+  resources :despesas
   resources :pedidos do
     resources :pedido_produtos
   end
   resources :pedidos
-  resources :receita
-  resources :despesas
   resources :fornecedors
   resources :produtos
   resources :clientes
