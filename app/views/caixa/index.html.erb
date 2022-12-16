@@ -1,0 +1,45 @@
+<div class='container'>
+<br><br><br><br><br><br><br>
+<h1>Acompanhe seu fluxo de caixa:</h1>
+<hr>
+
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Ordem</th>
+      <th scope="col">Total de Receitas</th>
+      <th scope="col">Total de Despesas</th>
+      <th scope="col">Saldo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><%= number_to_currency(@faturamentos, :unit => "R$") %></td>
+      <td><%= number_to_currency(@despesas, :unit => "R$") %></td>
+      <td><%= number_to_currency(@faturamentos - @despesas, :unit => "R$") %></td>
+    </tr>
+  </tbody>
+</table>
+<br><br>
+
+<h1>Acompanhe seu fluxo de pedidos:</h1>
+<hr>
+<br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Ordem</th>
+      <th scope="col">Valor total de pedidos:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><%= number_to_currency(@pedidos, :unit => "R$") %></td>
+    </tr>
+  </tbody>
+</table>
+<br><br>
