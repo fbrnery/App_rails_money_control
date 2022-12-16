@@ -1,0 +1,48 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <br>
+  <div class="container">
+  <div class="forms">
+    <h2>Cadastro</h2>
+    <hr>
+  </div>
+
+  <div class="container">
+    <h5>Preencha o formulário para criar sua conta:</h5>
+    <br>
+    <div class="field">
+      <%= form.label :email, 'E-mail:' %>
+      <%= form.text_field :email, size: 40, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :password, 'Senha:' %>
+      <%= form.password_field :password, size: 40, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :password_confirmation, 'Confirmar a senha:' %>
+      <%= form.password_field :password_confirmation,
+                            id: :user_password_confirmation,
+                            size: 40, class: "form-control" %>
+
+    </div>
+    <br>
+    <div class="actions">
+      <%= form.submit 'Cadastrar' %>
+    </div>
+    <% end %>
+
+  </div>
+</div>
