@@ -4,6 +4,7 @@ class DespesasController < ApplicationController
   # GET /despesas or /despesas.json
   def index
     @despesas = Despesa.all
+    @despesas = @despesas.where("lower(nome) ilike '%#{params[:nome]}%' ")
   end
 
   # GET /despesas/1 or /despesas/1.json

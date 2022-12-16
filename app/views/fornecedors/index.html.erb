@@ -1,24 +1,33 @@
-
 <br><br><br><br><br><br><br>
 
 <p id="notice"><%= notice %></p>
 <div class="container">
-<h1>Fornecedores:</h1>
-<hr>
+  <h1>Fornecedores:</h1>
+  <hr>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <form action="/fornecedors" method="get" class="d-flex" role="search">
+        <input type="type" name="nome" value="<%= params[:nome] %>" class="form-control me-2" type="search"
+          placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <br>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Telefone</th>
-      <th>Email</th>
-      <th>Site</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th>Site</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @fornecedors.each do |fornecedor| %>
+    <tbody>
+      <% @fornecedors.each do |fornecedor| %>
       <tr>
         <td><%= fornecedor.nome %></td>
         <td><%= fornecedor.telefone %></td>
@@ -26,13 +35,15 @@
         <td><%= fornecedor.site %></td>
         <td><%= link_to 'Mostrar', fornecedor, :class => "btn btn-outline-primary" %></td>
         <td><%= link_to 'Editar', edit_fornecedor_path(fornecedor), :class => "btn btn-outline-primary" %></td>
-        <td><%= link_to 'Apagar', fornecedor, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-primary" %></td>
+        <td>
+          <%= link_to 'Apagar', fornecedor, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-primary" %>
+        </td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to '+ Novo', new_fornecedor_path, :class => "btn btn-primary" %>
+  <%= link_to '+ Novo', new_fornecedor_path, :class => "btn btn-primary" %>
 </div>

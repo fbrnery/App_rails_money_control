@@ -4,6 +4,16 @@
 <div class="container">
 <h1>Receitas:</h1>
 <hr>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <form action="/faturamentos" method="get" class="d-flex" role="search">
+        <input type="type" name="nome" value="<%= params[:nome] %>" class="form-control me-2" type="search"
+          placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <br>
 
 <table class="table">
   <thead>

@@ -4,6 +4,7 @@ class FaturamentosController < ApplicationController
   # GET /faturamentos or /faturamentos.json
   def index
     @faturamentos = Faturamento.all
+    @faturamentos = @faturamentos.where("lower(nome) ilike '%#{params[:nome]}%' ")
   end
 
   # GET /faturamentos/1 or /faturamentos/1.json
